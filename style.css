@@ -11,7 +11,7 @@ body {
 
   @font-face {
     font-family: 'ARK';
-    src: url('../ARK-ES-SolidMedium.otf') format('opentype');
+    src: url('fonts/ARK-ES-SolidMedium.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     color: rgb(255, 255, 255);

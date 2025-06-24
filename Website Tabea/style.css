@@ -1,0 +1,70 @@
+body {
+    font-family: 'ARK', sans-serif ;
+    font-size: 100px;
+    background-color: #ffffffe7;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+
+  @font-face {
+    font-family: 'ARK';
+    src: url('../ARK-ES-SolidMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+  }
+
+  header {
+    background: #262829;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .gallery .images {
+    display:flex;
+    flex-direction: column; /* untereinander */
+    align-items: center;     /* zentriert */
+    gap: 2rem;               /* Abstand zwischen Bildern */
+    padding: 2rem;
+}
+  
+
+.bild {
+  max-width: 2100px; /* Größe begrenzen */
+  width: 100%;       /* Bild passt sich dem Container an */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+
+/* Individuelle Ausrichtung pro Bild */
+.bild-links {
+  transform: translateX(-100px) translateY(-1800px); /* leicht nach links */
+  
+}
+
+.bild-rechts {
+  transform: translateX(50px);  /* leicht nach rechts */
+}
+
+.bild-mitte {
+  transform: translateX(0);     /* bleibt zentriert */
+}
+
+
+  .contact a {
+    color: #0077cc;
+    text-decoration: none;
+  }

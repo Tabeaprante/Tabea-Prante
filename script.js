@@ -6,6 +6,33 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const imageUrl = link.getAttribute('href');
+      
+      // Check if we're on mobile (768px or less)
+      const isMobile = window.innerWidth <= 768;
+      
+      let modalContent;
+      
+      if (isMobile) {
+        // On mobile: show title and description in modal
+        const figcaption = link.querySelector('figcaption');
+        const title = figcaption?.querySelector('h3')?.textContent || '';
+        const description = figcaption?.querySelector('p')?.textContent || '';
+
+        modalContent = `
+          <div class="lightbox-content">
+            <img src="${imageUrl}" alt="${title}">
+            ${title || description ? `
+              <div class="lightbox-info">
+                ${title ? `<h3>${title}</h3>` : ''}
+                ${description ? `<p>${description}</p>` : ''}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      } else {
+        // On desktop: show only image (clean, minimal)
+        modalContent = `<img src="${imageUrl}" alt="">`;
+      }
 
       const options = {
         onShow(instance) {
@@ -40,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       basicLightbox
-        .create(`<img src="${imageUrl}" alt="">`, options)
+        .create(modalContent, options)
         .show();
     });
   });

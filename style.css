@@ -1,6 +1,8 @@
 /* ---------------------------------------- */
 /* 1. GENERAL THEME & RESET                */
 /* ---------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
 @font-face {
   font-family: 'ARK';
   src: url('./fonts/ARK-ES-SolidMedium.otf') format('opentype');
@@ -13,7 +15,7 @@
   --c-bg-oklch: oklch(27% 0.015 310);   /* Dark background (was text) */
   --border-subtle-oklch: oklch(from var(--text-oklch) l c h / .12);
   --font-heading: 'ARK', sans-serif;
-  --font-body: 'ARK', sans-serif; /* Using ARK for everything */
+  --font-body: 'Nunito', sans-serif; /* Using Nunito for body text */
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -23,7 +25,7 @@ body{
   color:var(--text-oklch);
   line-height:1.6;
   background:var(--c-bg-oklch);
-  font-weight:500;
+  font-weight:400;
 }
 
 /* ---------------------------------------- */

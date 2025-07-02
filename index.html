@@ -1,37 +1,106 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Mein Fotografie-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tabea Prante | Fotografie & Design</title>
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Tabea Prante </h1>
-    <p>Fotografien und Design</p>
-  </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Tabea Prante</h1>
+            <p class="subtitle">Fotografie & Design</p>
+            <nav class="hero-nav">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">Über Mich</a>
+                <a href="#contact">Kontakt</a>
+            </nav>
+        </div>
+    </section>
 
-  <section class="gallery">
-    <h2>Meine Arbeiten</h2>
-    <div class="images">
-      <img src="bilder/paris_apartements.jpg" class="bild bild-links" alt="Bild 1">
-      <img src="bilder/foto2.jpg" class="bild bild-rechts" alt="Bild 2">
-      <img src="bilder/foto3.jpg" class="bild bild-mitte" alt="Bild 3">
-      <!-- Mehr Bilder hier -->
-    </div>
-  </section>
+    <main>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="container">
+            <div class="section-intro">
+                <h2>Visuelle Geschichten</h2>
+            </div>
 
-  <section class="about">
-    <h2>Über mich</h2>
-    <p>Ich bin leidenschaftliche*r Fotograf*in und liebe es, Momente festzuhalten.</p>
-  </section>
+            <div class="gallery-grid">
+                <!-- Using <figure> and <figcaption> for semantic HTML5 -->
+                <a href="./bilder/paris_apartements.jpg" class="gallery-link">
+                    <figure class="gallery-item">
+                        <img src="./bilder/paris_apartements.jpg" alt="Pariser Apartments - Architektonische Details">
+                        <figcaption>
+                            <h3>Pariser Eleganz</h3>
+                            <p>Zeitlose Architektur im Herzen von Paris. Eine Studie über Licht, Schatten und städtische Geometrie.</p>
+                        </figcaption>
+                    </figure>
+                </a>
 
+                <a href="./bilder/Die_Treppe.jpg" class="gallery-link">
+                    <figure class="gallery-item">
+                        <img src="./bilder/Die_Treppe.jpg" alt="Die Treppe - Digitale Fotografie">
+                        <figcaption>
+                            <h3>Die Treppe</h3>
+                            <p>Digitale Fotografie - Ein Spiel mit Perspektive und Farbe, das den Betrachter in die Tiefe des Wassers hinabführt.</p>
+                        </figcaption>
+                    </figure>
+                </a>
 
+                <a href="./bilder/Blurry_Marseille.jpg" class="gallery-link">
+                    <figure class="gallery-item">
+                        <img src="./bilder/Blurry_Marseille.jpg" alt="Blurry in Marseille - Analoge Fotografie">
+                        <figcaption>
+                            <h3>Blurry in Marseille</h3>
+                            <p>Analoge Fotografie - Eine experimentelle Studie über Bewegung und die poetische Kraft der Unschärfe.</p>
+                        </figcaption>
+                    </figure>
+                </a>
 
+                <a href="./bilder/MAYA.jpg" class="gallery-link">
+                    <figure class="gallery-item">
+                        <img src="./bilder/MAYA.jpg" alt="MAYA - Digitale Porträt Fotografie">
+                        <figcaption>
+                            <h3>MAYA</h3>
+                            <p>Digitale Porträt Fotografie - Ein kraftvolles Statement über Eleganz und Selbstbewusstsein in warmen, intensiven Farben.</p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <!-- ADD MORE ITEMS HERE -->
+            </div>
+        </section>
 
-  <section class="contact">
-    <h2>Kontakt</h2>
-    <p>Schreib mir eine E-Mail: <a href="mailto:dein@email.de">tabea.prante@gmail.com</a></p>
-  </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>Über Mich</h2>
+                <p>
+                    Ich bin Tabea Prante, eine visuelle Geschichtenerzählerin. Meine Arbeit bewegt sich an der Schnittstelle von Fotografie und Design – zwei Disziplinen, die ich als untrennbar betrachte, um bedeutungsvolle Narrative zu schaffen.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact Section -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Kontakt</h3>
+            <p>Für Anfragen und Kollaborationen.</p>
+            <a href="mailto:tabea.prante@gmail.com" class="email-link">tabea.prante@gmail.com</a>
+            <div class="copyright">
+                © 2025 Tabea Prante
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (for viewing pictures in a modal) -->
+    <script src="https://unpkg.com/basiclightbox@5/dist/basicLightbox.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
-</html> 
+</html>
